@@ -1,2 +1,8 @@
 $("#message_new").html("<%= escape_javascript(render(:partial => "messages/form")) %>");
 $("#message_sent").fadeOut();
+$("#new_message").submit( function() {
+  $("#loading").show();
+  $("#new_message").submit( function() {
+    $("#phrase").attr("disabled","disabled");
+  });
+});
