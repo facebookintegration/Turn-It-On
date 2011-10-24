@@ -1,8 +1,8 @@
 development: &defaults
-  client_id: 289362154416578
-  client_secret: 27f9eb22806a5a92324768c0c3b74705
+  client_id: ENV['CLIENT_ID']
+  client_secret: ENV['CLIENT_SECRET']
   scope: user_about_me,email,publish_stream
-  canvas_url: http://localhost:3000/
+  canvas_url: http://foda-se.heroku.com/
 
 test:
   <<: *defaults

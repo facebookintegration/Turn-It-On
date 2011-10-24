@@ -1,5 +1,4 @@
 TurnItOn::Application.routes.draw do
-
   # Canvas App
   resource :canvas, :only => [:show, :create]
 

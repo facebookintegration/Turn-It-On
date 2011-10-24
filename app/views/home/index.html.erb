@@ -1,8 +1,5 @@
 <% if authenticated? %>
   <p><%= link_to "Logout", users_path, :method => :delete %></p>
 <% else %>
-  <dl>
-    <dt>Normal OAuth flow</dt>
-    <dd><%= link_to "Login", new_users_path %></dd>
-  </dl>
+  <p><%= link_to "Facebook Login", new_users_path %></p>
 <% end %>

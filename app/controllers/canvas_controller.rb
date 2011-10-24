@@ -1,8 +1,6 @@
 class CanvasController < ApplicationController
-  before_filter :require_authentication, :only => :show
-  
   def show
-    @message = Message.new(params[:message])
+    redirect_to User.config[:canvas_url]
   end
 
   def create
