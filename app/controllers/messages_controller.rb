@@ -11,13 +11,13 @@ class MessagesController < ApplicationController
     if @message.text.empty?
       @message.text = "tudo"
     end
-    current_user.profile.feed!(
-      :picture => "#{request.protocol}#{request.host_with_port}#{view_context.asset_path('thumb.png')}",
-      :link => fb_canvas_url,
-      :name => "Ligou o Foda-se para #{@message.text}",
-      :caption => "Ligue voc&#xea; tamb&#xe9;m e seja mais feliz!",
+    #current_user.profile.feed!(
+      #:picture => "http://foda-se.heroku.com/assets/thumb.png",
+      #:link => fb_canvas_url,
+      #:name => "Ligou o Foda-se para #{@message.text}",
+      #:caption => "Ligue voc&#xea; tamb&#xe9;m e seja mais feliz!",
       #:actions => [:name => "Ligar o Foda-se", :link => fb_canvas_url]
-    )
+    #)
     if !@message.save
       flash[:error] = "Algo deu errado..."
       redirect_to canvas_url

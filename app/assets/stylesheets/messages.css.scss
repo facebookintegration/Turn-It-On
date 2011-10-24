@@ -39,31 +39,41 @@ div#wrapper{
 	text-align: center;
 }
 
-input#phrase{
-	border: 1px solid #ccc;
-	padding: 5px;
-	margin: 10px 0 20px;
-}
+form#new_message{
 
-input#action{
-	display:block;
-  border: 0;
- 	border-radius: 5px;
-	background: url(asset_path("switch.png", image)) no-repeat -53px 0;
-	cursor: pointer;
-	width: 94px;
-	height: 27px;
-	margin: 0 auto;
-}
+	& input#phrase{
+		border: 1px solid #ccc;
+		padding: 5px;
+		margin: 10px 0 20px;
+	}
 
-div#message_sent{
-	display: none;
-  padding: 5px 10px;
-  width: 200px;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #C2D288;
-  background-color: #E3EBC6;
-  color: #666;
+	& input#action{
+		border: 0;
+	 	border-radius: 5px;
+		background: url(asset_path("switch.png", image)) no-repeat -53px 0;
+		cursor: pointer;
+		width: 94px;
+		height: 27px;
+	}
+	
+	& span#loading{
+		display: none;
+		position: absolute;
+		background: url(asset_path("ajax-loader.gif", image)) no-repeat 0 0;
+		width: 18px;
+		height: 18px;
+		margin: 5px 0 0 5px;
+	}
+	
+	& div#message_sent{
+		display: none;
+		padding: 5px 10px;
+		width: 200px;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border: 1px solid #C2D288;
+		background-color: #E3EBC6;
+		color: #666;
+	}
 }

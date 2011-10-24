@@ -1,4 +1,9 @@
 <%= form_for (Message.new), :remote => true do |form| %>
   <%= form.text_field :text, :id => "phrase", :placeholder => "ex: política brasileira" %>
-  <%= form.submit '', :id => "action", :title => "Ligue o Foda-se" %>
+  <div>
+    <%= form.submit '', :id => "action", :title => "Ligue o Foda-se" %><span id="loading"></span>
+  </div>
+  <div id="message_sent">
+    <strong>Foda-se Ligado!</strong> <%= link_to 'Ligar outro', new_message_url, :remote => true %>
+  </div>
 <% end %>

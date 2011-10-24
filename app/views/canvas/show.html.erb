@@ -4,6 +4,3 @@
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 <% end %>
-<div id="message_sent">
- <strong>Foda-se Ligado!</strong> <%= link_to 'Ligar outro', new_message_url, :remote => true %>
-</div>
