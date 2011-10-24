@@ -8,12 +8,20 @@ body{
 	margin-top: 20px;
 }
 
-h1{
+div#hgroup{
+	margin: 0 auto;
 	font-family: 'Fontdiner Swanky', cursive;
-	font-size: 40px;
 	color: #1996BE;
 	text-shadow: 2px 3px 3px rgba(0,0,0,0.10);
-	margin: 20px 0;
+	width: 200px;
+	& span{
+		font-size: 12px;
+		text-align: left;
+		display:block;
+	}
+	& h1{
+		font-size: 40px;
+	}
 }
 
 a, a:visited{
@@ -26,48 +34,30 @@ a:hover{
 }
 
 div#wrapper{
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 5px;
 	width: 600px;
 	margin: 0 auto;
 	text-align: center;
-	padding: 20px 10px;
-}
-
-div#form_error{
-	color: red;
-	font-weight: bold;
-	margin-bottom: 10px;
 }
 
 input#phrase{
 	border: 1px solid #ccc;
 	padding: 5px;
+	margin: 10px 0 20px;
 }
 
 input#action{
-	margin-left: 5px;
+	display:block;
   border: 0;
-	border-radius: 5px;
-	background: #9AC9DF;
+ 	border-radius: 5px;
+	background: url(asset_path("switch.png", image)) no-repeat -53px 0;
 	cursor: pointer;
-	padding: 6px 10px;
-	color: #fff;
-	font-weight: bold;
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.15);
-  position: relative;
+	width: 94px;
+	height: 27px;
+	margin: 0 auto;
 }
 
-input#action:hover{
-	background: #84B8D0;
-}
-
-input#action:active{
-	top: 1px;
-}
-
-div#flash_notice{
+div#message_sent{
+	display: none;
   padding: 5px 10px;
   width: 200px;
   margin: 0 auto;

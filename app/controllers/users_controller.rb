@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     access_token = client.access_token!
     user = FbGraph::User.me(access_token).fetch
     authenticate User.identify(user)
+    get_user_info(current_user,user)
     redirect_to canvas_url
   end
 
@@ -28,6 +29,13 @@ class UsersController < ApplicationController
   end
 
   private
+  
+  def get_user_info(user,facebook)
+    user.first_name = facebook.first_name
+    user.last_name = facebook.last_name
+    user.email = facebook.email
+    user.save
+  end
 
   def oauth2_error(e)
     flash[:error] = {

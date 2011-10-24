@@ -1,5 +1,4 @@
-<%= form_for (Message.new) do |form| %>
-  <%= label_tag(:text, "Ligue o Foda-se para:") %>
-  <%= form.text_field :text, :id => "phrase", :autofocus => "on" %>
-  <%= form.submit 'Ligar!', :id => "action" %>
+<%= form_for (Message.new), :remote => true do |form| %>
+  <%= form.text_field :text, :id => "phrase", :placeholder => "ex: política brasileira" %>
+  <%= form.submit '', :id => "action", :title => "Ligue o Foda-se" %>
 <% end %>

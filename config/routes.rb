@@ -9,7 +9,7 @@ TurnItOn::Application.routes.draw do
   end
   
   #Send Message
-  resources :messages, :only => [:create]
+  resources :messages, :only => [:new, :create]
   
-  root :to => 'top#index'
+  root :to => 'home#index'
 end

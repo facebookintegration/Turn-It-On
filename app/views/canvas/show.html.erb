@@ -1,7 +1,9 @@
-<%= render :partial => 'messages/form' %>
+<div id="message_new">
+  <%= render :partial => 'messages/form' %>
+</div>
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 <% end %>
-<% if authenticated? %>
-  <p><%= link_to "Logout", users_path, :method => :delete %></p>
-<% end -%>
+<div id="message_sent">
+ <strong>Foda-se Ligado!</strong> <%= link_to 'Ligar outro', new_message_url, :remote => true %>
+</div>

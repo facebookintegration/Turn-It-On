@@ -17,5 +17,9 @@ class ApplicationController < ActionController::Base
   def fb_canvas_url
     'https://apps.facebook.com/foda_se/'
   end
+  
+  def fb_thumbs_url
+    'https://apps.facebook.com/foda_se/'
+  end
 
 end
