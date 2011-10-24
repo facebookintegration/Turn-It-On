@@ -1,6 +1,7 @@
 class CanvasController < ApplicationController
+  before_filter :require_authentication, :only => :show
+  
   def show
-    redirect_to User.config[:canvas_url]
   end
 
   def create
