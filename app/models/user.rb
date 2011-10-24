@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   
+  has_many :messages
+  
   def profile
     @profile ||= FbGraph::User.me(self.access_token).fetch
   end

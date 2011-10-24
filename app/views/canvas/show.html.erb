@@ -1,10 +1,7 @@
-<article class='canvas'>
+<%= render :partial => 'messages/form' %>
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 <% end %>
-  <h2>Hello <%= current_user.profile.first_name %>!</h2>
-  <p>This is the canvas! <%= current_user.profile.email %></p>
-  <% if authenticated? %>
-    <p><%= link_to "Logout", users_path, :method => :delete %></p>
-  <% end -%>
-</article>
+<% if authenticated? %>
+  <p><%= link_to "Logout", users_path, :method => :delete %></p>
+<% end -%>

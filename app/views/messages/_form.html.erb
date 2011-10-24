@@ -1,0 +1,5 @@
+<%= form_for (Message.new) do |form| %>
+  <%= label_tag(:text, "Ligue o Foda-se para:") %>
+  <%= form.text_field :text, :id => "phrase", :autofocus => "on" %>
+  <%= form.submit 'Ligar!', :id => "action" %>
+<% end %>

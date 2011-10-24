@@ -2,6 +2,7 @@ class CanvasController < ApplicationController
   before_filter :require_authentication, :only => :show
   
   def show
+    @message = Message.new(params[:message])
   end
 
   def create

@@ -13,5 +13,9 @@ class ApplicationController < ActionController::Base
     current_user.try(:destroy)
     redirect_to root_url
   end
+  
+  def fb_canvas_url
+    'https://apps.facebook.com/foda_se/'
+  end
 
 end

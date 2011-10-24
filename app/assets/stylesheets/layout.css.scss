@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-size: 15px;
+	margin-top: 20px;
+}
+
+h1{
+	font-family: 'Fontdiner Swanky', cursive;
+	font-size: 40px;
+	color: #1996BE;
+	text-shadow: 2px 3px 3px rgba(0,0,0,0.10);
+	margin: 20px 0;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: #1996BE;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+div#wrapper{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 10px;
+}
+
+div#form_error{
+	color: red;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+input#phrase{
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+input#action{
+	margin-left: 5px;
+  border: 0;
+	border-radius: 5px;
+	background: #9AC9DF;
+	cursor: pointer;
+	padding: 6px 10px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+input#action:hover{
+	background: #84B8D0;
+}
+
+input#action:active{
+	top: 1px;
+}
+
+div#flash_notice{
+  padding: 5px 10px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #C2D288;
+  background-color: #E3EBC6;
+  color: #666;
+}

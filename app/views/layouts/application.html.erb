@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
-    <title>Turn It On!</title>
-    <meta property="fb:app_id" content="<%= User.config[:client_id] %>">
+    <title>Foda-se: Ligue e seja feliz!</title>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Fontdiner+Swanky" %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="fb-root"></div>
-    <h1>Turn It On!</h1>
-    <div class="main">
+    <div id="wrapper">
+      <h1>Foda-se!</h1>
       <%= yield %>
     </div>
-    <script src="http://connect.facebook.net/en_US/all.js"></script>
-    <script>
-      FB.init({
-        appId: "<%= User.config[:client_id] %>",
-        cookie: true,
-        xfbml: true,
-        oauth: true
-      });
-    </script>
   </body>
 </html>
