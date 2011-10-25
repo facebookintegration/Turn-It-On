@@ -23,7 +23,7 @@ TurnItOn::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
   
   # Force SSL
-    config.force_ssl = false
+  # config.force_ssl = false
 
   # Do not compress assets
   config.assets.compress = false
