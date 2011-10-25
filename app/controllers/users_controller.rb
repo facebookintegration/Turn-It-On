@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     access_token = client.access_token!
     user = FbGraph::User.me(access_token).fetch
     authenticate User.identify(user)
-    redirect_to canvas_url
+    get_user_info(current_user,user)    
   end
 
   def destroy
