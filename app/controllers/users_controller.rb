@@ -43,6 +43,6 @@ class UsersController < ApplicationController
       :title => e.response[:error][:type],
       :message => e.response[:error][:message]
     }
-    redirect_to canvas_url
+    redirect_to root_url
   end
 end
