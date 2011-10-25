@@ -1,5 +1,5 @@
 class CanvasController < ApplicationController
-  before_filter :require_authentication, :only => :show
+  before_filter :require_authentication
   
   def show
   end
