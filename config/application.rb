@@ -46,7 +46,7 @@ module TurnItOn
     config.filter_parameters += [:password]
     
     # Force SSL
-    #config.force_ssl = true
+    config.force_ssl = false
 
     # Enable the asset pipeline
     config.assets.enabled = true
