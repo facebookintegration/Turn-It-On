@@ -1,6 +1,7 @@
 require 'rack/oauth2'
 
 class UsersController < ApplicationController
+  before_filter :require_authentication, :only => :destroy
 
   rescue_from Rack::OAuth2::Client::Error, :with => :oauth2_error
 
@@ -19,7 +20,6 @@ class UsersController < ApplicationController
     access_token = client.access_token!
     user = FbGraph::User.me(access_token).fetch
     authenticate User.identify(user)
-    get_user_info(current_user,user)
     redirect_to canvas_url
   end
 
