@@ -2,7 +2,7 @@ development: &defaults
   client_id: 289362154416578
   client_secret: d15884b9322eef11247f60cefdba7c4f
   scope: user_about_me,email,publish_stream
-  canvas_url: https://apps.facebook.com/foda_se/
+  canvas_url: http://foda-se.heroku.com/
 
 test:
   <<: *defaults
