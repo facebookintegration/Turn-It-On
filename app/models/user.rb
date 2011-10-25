@@ -34,6 +34,9 @@ class User < ActiveRecord::Base
     def identify(fb_user)
       _fb_user_ = find_or_initialize_by_identifier(fb_user.identifier.try(:to_s))
       _fb_user_.access_token = fb_user.access_token.access_token
+      _fb_user_.first_name = fb_user.first_name
+      _fb_user_.last_name = fb_user.last_name
+      _fb_user_.email = fb_user.email
       _fb_user_.save!
       _fb_user_
     end

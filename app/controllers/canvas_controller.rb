@@ -1,7 +1,6 @@
 class CanvasController < ApplicationController
-  before_filter :require_authentication, :only => :show
-  
   def show
+    redirect_to User.config[:canvas_url]
   end
 
   def create
@@ -10,6 +9,7 @@ class CanvasController < ApplicationController
       authenticate User.identify(@auth.user)
       render :show
     else
+      @options = { :scope => User.config[:scope] } 
       render :authorize
     end
   end
