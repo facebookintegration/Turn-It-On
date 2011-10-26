@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
     end
     if @message.save
       current_user.profile.feed!(
-      :picture => "#{request.protocol}#{request.host_with_port}#{asset_path("thumb.png")}",
+      :picture => "http://foda-se.heroku.com/assets/thumb.png", # need to be relative!
       :link => fb_canvas_url,
       :name => message,
       :caption => "Ligue voc&#xea; tamb&#xe9;m e seja mais feliz!",
