@@ -8,22 +8,6 @@ body{
 	margin-top: 20px;
 }
 
-div#hgroup{
-	margin: 0 auto;
-	font-family: 'Fontdiner Swanky', cursive;
-	color: #1996BE;
-	text-shadow: 2px 3px 3px rgba(0,0,0,0.10);
-	width: 200px;
-	& span{
-		font-size: 12px;
-		text-align: left;
-		display:block;
-	}
-	& h1{
-		font-size: 40px;
-	}
-}
-
 a, a:visited{
   text-decoration: none;
   color: #1996BE;

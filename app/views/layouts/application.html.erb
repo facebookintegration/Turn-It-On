@@ -2,17 +2,13 @@
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <title>Foda-se: Ligue e seja feliz!</title>
-    <%# stylesheet_link_tag "http://fonts.googleapis.com/css?family=Fontdiner+Swanky" %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <div id="wrapper">
-      <div id="hgroup">
-        <span>Ligue o</span>
-        <h1>Foda-se!</h1>
-      </div>
+      <h1><%= image_tag 'logo.png' %></h1>
       <%= yield %>
     </div>
   </body>
